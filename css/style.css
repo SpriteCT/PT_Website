@@ -42,3 +42,19 @@ body {
     width: 100px;
     height: 50px;
 }
+
+.button_js {
+    text-align: center;
+}
+
+#myButton {
+    color:white;
+    background-color: #08161e;
+    border-radius: 20px;
+    height: 50px;
+}
+
+#demo img {
+    margin-top: 20px    ;
+    width: 25%;
+}
