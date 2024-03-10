@@ -60,6 +60,41 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="hello">
+                    Привет, <?php echo $_COOKIE['User']; ?>
+                </h1>
+            </div>
+            <div class="col-12">
+                <form method="POST" action="/profile.php">
+                    <div class="form_reg row"><input type ="text" class="form" name="title" placeholder="Заголовок вашего поста"></input></div>
+                    <div class="form_reg row"><textarea name="text" cols="30" rows="10" placeholder="Введите текст вашего поста ..."></textarea></div>
+                    <div class="btn_add"><button type="submit" class="btn_red" name="submit">Сохранить пост!</button></add>
+                </form>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript" src="js/button.js"></script>
 </body>
 </html>
+<?php
+require_once('db.php');
+//Подключаемся к БД
+$link = mysqli_connect('127.0.0.1', 'root', 'myrootpass', 'mydb');
+//Проверяем наличие значений в форме
+if (isset($_POST['submit'])) {
+    $title = $_POST['title'];
+    $main_text = $_POST['text'];
+    //Проверка на пустые значения
+    if (!$title || !$main_text) die ('Пожалуйста введите все значения!');
+    //Определим SQL запрос
+    $sql = "INSERT INTO posts (title, main_text) VALUES ('$title', '$main_text')";
+    //Проверка на ошибку
+    if(!mysqli_query($link, $sql)) {
+        echo "Не удалось добавить пользователя";
+    }
+    mysqli_close($link);
+}
+?>

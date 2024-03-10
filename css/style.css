@@ -10,22 +10,10 @@ body {
 .container {
     margin-top:30px;
 }
-.row {
-}
-.col-8 {
-}
-.col-4 {
-}
-.col-3.nav_logo {
-}
-.col-9 {
-}
 .nav_text {
     display: flex;
     align-items: center;
     justify-content: right;
-}
-.img_size {
 }
 .title_photo {
     text-align: center;
@@ -55,7 +43,7 @@ body {
 }
 
 #demo img {
-    margin-top: 20px    ;
+    margin-top: 20px;
     width: 25%;
 }
 
@@ -63,6 +51,25 @@ body {
     text-align: center;
 }
 #auth_head{
+    text-align: center;
+    font-size: 30px;
+}
+.form_reg{
+    margin-top: 10px;
+}
+.btn_red{
+    margin-top: 10px;
+    color:white;
+    background-color: #ff5757;
+    border-radius: 20px;
+    height: 50px;
+}
+.btn_add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post{
     text-align: center;
     font-size: 30px;
 }

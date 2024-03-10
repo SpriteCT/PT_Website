@@ -12,18 +12,30 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-12 index" id="auth_head">
-                <h1>Авторизируйтесь!</h1>
-        </div>
-        <?php
-        if (!isset($_COOKIE['user'])) {
-        ?>
-            <div class ="col-12" id="auth"><a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php">войдите</a>!</div>
-        <?php
-        } else  {
-            //Подклбчение к БД
-        }
-        ?>
+        <div class="row center">
+            <div class="col-12 index" id="auth_head">
+                    <h1>Список постов!</h1>
+            </div>
+            <?php
+            if (!isset($_COOKIE['User'])) {
+            ?>
+                <div class ="col-12" id="auth"><a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php">войдите</a>!</div>
+            <?php
+            } else  {
+                $link = mysqli_connect('127.0.0.1', 'root', 'myrootpass', 'mydb');
+
+                $sql = 'SELECT * FROM posts';
+                $res = mysqli_query($link, $sql);
+                if (mysqli_num_rows($res) > 0){
+                    while($post = mysqli_fetch_array($res)) {
+                        echo "<a class='col-12 post' href='/posts.php?id='" . $post["id"] . "'>" . $post["title"] . "</a><br>";
+                    }
+                }
+                else{
+                    echo "Записей нет";
+                }
+            }
+            ?>
         </div>
     </div>
 </body>
