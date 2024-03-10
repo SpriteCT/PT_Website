@@ -58,3 +58,11 @@ body {
     margin-top: 20px    ;
     width: 25%;
 }
+
+#auth {
+    text-align: center;
+}
+#auth_head{
+    text-align: center;
+    font-size: 30px;
+}
