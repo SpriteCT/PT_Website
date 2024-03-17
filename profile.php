@@ -83,7 +83,7 @@
 <?php
 require_once('db.php');
 //Подключаемся к БД
-$link = mysqli_connect('db', 'root', 'myrootpass', 'mydb');
+$link = mysqli_connect('db', 'root', 'kali', 'first');
 //Проверяем наличие значений в форме
 if (isset($_POST['submit'])) {
     $title = $_POST['title'];

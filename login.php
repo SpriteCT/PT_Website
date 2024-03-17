@@ -35,7 +35,7 @@ if (isset($_COOKIE['User'])) {
     header("Location: profile.php");
 }
 //Подключаемся к БД
-$link = mysqli_connect('db', 'root', 'myrootpass', 'mydb');
+$link = mysqli_connect('db', 'root', 'kali', 'first');
 //Проверяем наличие значений в форме
 if (isset($_POST['submit'])) {
     $username = $_POST['login'];

@@ -1,8 +1,8 @@
 <?php 
 $servername = "db";
 $username = "root";
-$password = "myrootpass";
-$dbName = "mydb";
+$password = "kali";
+$dbName = "first";
 //Подключение к MariaDB
 $link = mysqli_connect($servername, $username, $password);
 //Вывод ошибки при её возникновении

@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect('db', 'root', 'myrootpass');
+$link = mysqli_connect('db', 'root', 'kali', 'first');
 if (!$link){
 	die('Error:' . mysqli_error());
 }

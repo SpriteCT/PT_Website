@@ -22,7 +22,7 @@
                 <div class ="col-12" id="auth"><a href="/registration.php">Зарегистрируйтесь</a> или <a href="/login.php">войдите</a>!</div>
             <?php
             } else  {
-                $link = mysqli_connect('db', 'root', 'myrootpass', 'mydb');
+                $link = mysqli_connect('db', 'root', 'kali', 'first');
 
                 $sql = 'SELECT * FROM posts';
                 $res = mysqli_query($link, $sql);
